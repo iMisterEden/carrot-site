@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ООО «Центр апробации моркови» — Справочное пособие</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        agro: {
+                            50: '#f2fbf5',
+                            100: '#e1f6e8',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        carrot: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-carrot-500 selection:text-white overflow-x-hidden break-words">
+
+    <!-- Плавающая шапка -->
+    <header class="fixed top-4 left-4 right-4 max-w-6xl mx-auto rounded-2xl shadow-lg z-50 bg-white/95 backdrop-blur-md border border-slate-200 transition-all">
+        <div class="px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 flex-1 min-w-0">
+              <!-- Иконка (добавлен shrink-0, чтобы она не сплющивалась) -->
+              <div class="shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-carrot-500 to-carrot-600 flex items-center justify-center text-white shadow-md shadow-carrot-500/20">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+              </svg>
+            </div>
+    
+    <!-- Текстовый блок (добавлен flex-1 и min-w-0 для контроля ширины) -->
+            <div class="flex-1 min-w-0">
+        <!-- Добавлен truncate, чтобы длинное слово обрезалось троеточием, если не влезает -->
+              <span class="block text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-agro-700 truncate">Научно-производственная организация</span>
+              <span class="block font-bold text-slate-900 text-sm sm:text-lg leading-tight truncate">ООО «Центр апробации моркови»</span>
+            </div>
+</div>
+
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-carrot-600 transition">О пособии</a>
+                <a href="#structure" class="hover:text-carrot-600 transition">Содержание</a>
+                <a href="#standards" class="hover:text-carrot-600 transition">Нормативы</a>
+                <a href="#support" class="hover:text-carrot-600 transition">Поддержка</a>
+            </nav>
+
+            <a href="tel:89120779967" class="hidden sm:inline-flex items-center gap-2 bg-slate-900 hover:bg-carrot-600 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition shadow-sm shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+                </svg>
+                <span>8 (912) 077-99-67</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section id="about" class="relative overflow-hidden bg-gradient-to-b from-white via-agro-50/50 to-slate-50 pt-32 sm:pt-40 pb-16 lg:pb-28 border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Текстовая часть -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-carrot-100 text-carrot-700 text-[10px] sm:text-xs font-bold uppercase tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-carrot-600 shrink-0"></span>
+                        <span>Новое научно-практическое издание</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                        <span class="block">Справочное пособие</span>
+                        <span class="block">по апробации сортов</span>
+                        <span class="block text-carrot-600">моркови столовой</span>
+                        <span class="block">в лесостепной зоне</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Пособие предназначено для специалистов АПК, селекционеров, семеноводов и научных работников, занятых оценкой и внедрением сортов моркови в условиях лесостепной зоны Тюменской области.
+                    </p>
+
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm text-sm text-slate-600 leading-relaxed text-left">
+                        <strong class="text-slate-900 block mb-1">Практическая и нормативная база:</strong>
+                        Пособие опирается на результаты многолетних исследований в лесостепной зоне Тюменской области и согласовано с действующими нормативами, что позволяет использовать его как для производственной апробации, так и для планирования сортосмены и закладки семенных участков.
+                    </div>
+                </div>
+
+                <!-- Визуальный макет обложки пособия (3D) -->
+                <div class="lg:col-span-5 flex justify-center mt-8 lg:mt-0">
+                    <div class="relative w-full max-w-sm">
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-agro-600/20 to-carrot-500/20 rounded-3xl blur-xl"></div>
+                        <div class="relative bg-white rounded-3xl border-2 border-slate-200 p-7 shadow-2xl flex flex-col justify-between min-h-[440px]">
+                            <div>
+                                <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-4 mb-6 gap-2">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">ООО «Центр апробации»</span>
+                                    <span class="px-2.5 py-1 text-[10px] font-bold bg-agro-100 text-agro-800 rounded-md">ГОСТ 32592‑2013</span>
+                                </div>
+                                <div class="w-14 h-14 rounded-2xl bg-carrot-50 border border-carrot-100 flex items-center justify-center text-carrot-600 mb-5">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-xl font-bold text-slate-900 leading-snug mb-3">
+                                    Справочное пособие по апробации сортов моркови столовой
+                                </h2>
+                                <p class="text-sm text-slate-500">
+                                    Методическое руководство для условий лесостепной зоны Тюменской области и Северного Зауралья
+                                </p>
+                            </div>
+
+                            <div class="pt-6 border-t border-slate-100 mt-6 grid grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl text-center">
+                                    <span class="text-slate-500 font-semibold block text-[10px]">Энергия</span>
+                                    <span class="text-base font-bold text-slate-800 mt-0.5 block">44 %</span>
+                                </div>
+                                <div class="bg-agro-50 border border-agro-100 p-3 rounded-xl text-center">
+                                    <span class="text-agro-700 font-semibold block text-[10px]">Всхожесть</span>
+                                    <span class="text-base font-bold text-agro-800 mt-0.5 block">72 %</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Систематизированные разделы пособия (Элегантные карточки из v1) -->
+    <section id="structure" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12 sm:mb-14">
+                <span class="text-carrot-600 font-bold text-xs uppercase tracking-widest">Научно-методическая структура</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Что систематизировано в пособии</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                    Все материалы адаптированы к агроклиматическим условиям Северного Зауралья и направлены на повышение эффективности сортовой оценки и семеноводства.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                
+                <!-- Карточка 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-carrot-100 text-carrot-600 flex items-center justify-center font-bold text-lg mb-5 shrink-0">01</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2.5">Критерии сортовой оценки</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Основные хозяйственно ценные признаки (форма, окраска, длина и масса корнеплода, вкусовые качества, устойчивость к цветушности и растрескиванию), значимые именно для климата Северного Зауралья.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-[11px] uppercase tracking-wider font-bold text-carrot-600">Климат Северного Зауралья</div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-agro-100 text-agro-700 flex items-center justify-center font-bold text-lg mb-5 shrink-0">02</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2.5">Методика полевой апробации</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Сроки и схемы осмотра посевов, учёт типичности сорта, выделение и выбраковка нетипичных растений, расчёт процента сортовой чистоты.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-[11px] uppercase tracking-wider font-bold text-agro-700">Контроль сортовой чистоты</div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-carrot-100 text-carrot-600 flex items-center justify-center font-bold text-lg mb-5 shrink-0">03</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2.5">Фенологические наблюдения</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Ключевые фазы развития моркови (всходы, формирование розетки, нарастание корнеплода, цветение на втором году) с учётом короткого вегетационного периода и рисков возвратных заморозков.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-[11px] uppercase tracking-wider font-bold text-carrot-600">Учёт рисков заморозков</div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-agro-100 text-agro-700 flex items-center justify-center font-bold text-lg mb-5 shrink-0">04</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2.5">Нормативы посевных качеств</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Показатели энергии прорастания и всхожести по ГОСТ 32592‑2013; в условиях региона типичны значения порядка 44 % (энергия прорастания) и 72 % (всхожесть), что соответствует требованиям стандарта.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-[11px] uppercase tracking-wider font-bold text-agro-700">ГОСТ 32592‑2013</div>
+                </div>
+
+                <!-- Карточка 5 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-carrot-100 text-carrot-600 flex items-center justify-center font-bold text-lg mb-5 shrink-0">05</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2.5">Рекомендации по семеноводству</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Сроки посева и уборки семенников, приёмы дозаривания и обмолота, условия послеуборочного дозревания и хранения семян.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-[11px] uppercase tracking-wider font-bold text-carrot-600">Технология работы</div>
+                </div>
+
+                <!-- Карточка 6 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-11 h-11 rounded-xl bg-agro-100 text-agro-700 flex items-center justify-center font-bold text-lg mb-5 shrink-0">06</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2.5">Подбор адаптированных сортов</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Ориентация на Государственный реестр селекционных достижений и данные региональных испытаний: предпочтение сортам и гибридам с повышенной холодостойкостью, стабильной урожайностью и хорошей лёжкостью.
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-[11px] uppercase tracking-wider font-bold text-agro-700">Госреестр и испытания</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок акцента на нормативах (Тёмный фон + белые плашки из v4) -->
+    <section id="standards" class="py-16 sm:py-20 bg-gradient-to-br from-slate-900 to-agro-900 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                    <span class="inline-block px-3 py-1.5 rounded-md bg-carrot-500 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-sm">
+                        Стандартизация и практика АПК
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-white">
+                        Ориентир на ГОСТ 32592‑2013 и многолетние испытания
+                    </h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Издание объединяет теоретическую базу и практический регламент для специалистов агропромышленного комплекса, позволяя объективно оценивать посевные качества семян, планировать сортосмену и закладывать семенные участки.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <!-- Белая карточка 1 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 text-center shadow-xl flex flex-col justify-center border-b-4 border-carrot-500">
+                        <span class="text-4xl sm:text-5xl font-extrabold text-slate-900 block tracking-tight">44 <span class="text-2xl sm:text-3xl text-carrot-500">%</span></span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 mt-3 block font-bold">Энергия прорастания</span>
+                    </div>
+                    <!-- Белая карточка 2 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 text-center shadow-xl flex flex-col justify-center border-b-4 border-agro-500">
+                        <span class="text-4xl sm:text-5xl font-extrabold text-slate-900 block tracking-tight">72 <span class="text-2xl sm:text-3xl text-agro-500">%</span></span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 mt-3 block font-bold">Лабораторная всхожесть</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обязательный грантовый блок с точными SVG логотипами -->
+    <section id="support" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm">
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                    <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400">Государственная поддержка инноваций</span>
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 mt-2">Официальная информация о реализации проекта</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 items-stretch">
+                    
+                    <!-- Логотип 1: Фонд содействия инновациям -->
+                    <div class="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm text-center h-full">
+                        <div class="w-full max-w-[240px] sm:max-w-[280px] mb-6">
+                            <svg viewBox="0 0 500 230" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <text x="250" y="72" text-anchor="middle" fill="#4A4F55" class="font-oswald" font-weight="500" font-size="47" letter-spacing="0.06em">ФОНД СОДЕЙСТВИЯ</text>
+                                <text x="250" y="130" text-anchor="middle" fill="#4A4F55" class="font-oswald" font-weight="500" font-size="54" letter-spacing="0.145em">ИННОВАЦИЯМ</text>
+                                <path d="M 45 144 C 135 224, 345 224, 455 144 C 350 202, 165 202, 85 144 Z" fill="#E31E24"></path>
+                                <path d="M 85 144 C 165 202, 350 202, 455 144 C 360 183, 200 183, 130 144 Z" fill="#0095DA"></path>
+                                <path d="M 130 144 C 200 183, 360 183, 455 144 C 368 166, 235 166, 175 144 Z" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.3"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-sm sm:text-base font-extrabold text-slate-900">Фонд содействия инновациям</div>
+                            <div class="text-xs sm:text-sm text-slate-500 mt-1">Программа «Студенческий стартап»</div>
+                        </div>
+                    </div>
+
+                    <!-- Логотип 2: ПУТП -->
+                    <div class="flex flex-col items-center justify-center p-6 sm:p-8 rounded-2xl bg-[#7B00FF] border border-purple-800 shadow-sm text-white text-center h-full overflow-hidden relative">
+                        <div class="w-full max-w-[240px] sm:max-w-[280px] mb-6 relative z-10">
+                            <svg viewBox="0 0 500 250" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g transform="translate(250, 132) skewY(-19) translate(-250, -125)">
+                                    <path d="M 122 52 H 72 V 196 H 122 V 172 H 96 V 76 H 122 Z" fill="#FFFFFF"></path>
+                                    <text x="128" y="96" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="22" letter-spacing="0.03em">ПЛАТФОРМА</text>
+                                    <text x="128" y="122" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="22" letter-spacing="0.02em">УНИВЕРСИТЕТСКОГО</text>
+                                    <text x="128" y="148" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="22" letter-spacing="0.02em">ТЕХНОЛОГИЧЕСКОГО</text>
+                                    <text x="128" y="174" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="20.5" letter-spacing="0.015em">ПРЕДПРИНИМАТЕЛЬСТВА</text>
+                                    <path d="M 382 52 H 432 V 196 H 382 V 172 H 408 V 76 H 382 Z" fill="#FFFFFF"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="text-xs sm:text-sm font-medium text-purple-200">Федеральный проект «Технологии»</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Обязательный текст по ТЗ -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-slate-900 text-white text-center">
+                    <p class="text-xs sm:text-sm font-medium leading-relaxed max-w-4xl mx-auto">
+                        «Проект реализован при поддержке Фонда содействия инновациям в рамках программы «Студенческий стартап» мероприятия «Платформа университетского технологического предпринимательства» федерального проекта «Технологии»».
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и подвал (Чистый дизайн из v1) -->
+    <footer id="contacts" class="bg-white border-t border-slate-200 pt-12 sm:pt-16 pb-10 sm:pb-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-200">
+                
+                <div class="md:col-span-5 space-y-3">
+                    <div class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-agro-700">Контакты</div>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">ООО «Центр апробации моркови»</h2>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Научно-методическое обеспечение, оценка и внедрение сортов моркови столовой в лесостепной зоне Тюменской области.
+                    </p>
+                </div>
+
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <!-- Адрес -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/70">
+                        <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mb-2">Юридический адрес</div>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                            625000, Тюменская область,<br>г. Тюмень, ул. Республики, д. 53
+                        </p>
+                    </div>
+
+                    <!-- Телефон -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/70">
+                        <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mb-2">Телефон</div>
+                        <a href="tel:89120779967" class="text-sm font-bold text-slate-900 hover:text-carrot-600 transition block">
+                            89120779967
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/70">
+                        <div class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mb-2">Электронная почта</div>
+                        <a href="mailto:aseevaav72@yandex.ru" class="text-sm font-bold text-slate-900 hover:text-carrot-600 transition block">
+                            aseevaav72@yandex.ru
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-xs text-slate-400 gap-4 text-center sm:text-left">
+                <div>© ООО «Центр апробации моркови». Все права защищены.</div>
+                <div>г. Тюмень, ул. Республики, д. 53</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
